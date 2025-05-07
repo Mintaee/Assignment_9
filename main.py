@@ -1,12 +1,17 @@
 from typing import List
 
-def path_to_file_list(path: str) -> List[str]:
+def path_to_file_list(path: str) -> List[str]:<<<<<<< HEAD
 mintae@DESKTOP-F56GDDA:/mnt/c/Users/kmt02/Assignment_9$ git merge train_file_list_to_json
 Auto-merging main.py
 CONFLICT (content): Merge conflict in main.py
 Automatic merge failed; fix conflicts and then commit the result.    """Reads a file and returns a list of lines in the file"""
     # Will this be working?
     lines = open(path, 'r').read().split('\n')
+=======
+    """Reads a file and returns a list of lines in the file"""
+    # implemented as a one-liner
+    lines = open(path, 'r').read().split('\n')
+>>>>>>> path_to_file_list
     return lines
 
 def train_file_list_to_json(english_file_list: List[str], german_file_list: List[str]) -> List[str]:
@@ -49,7 +54,11 @@ def write_file_list(file_list: List[str], path: str) -> None:
     """Writes a list of strings to a file, each string on a new line"""
     with open(path, 'w') as f:
         for file in file_list:
-            f.write(file + '\n'
+<<<<<<< HEAD
+            f.write(file + '\n')
+=======
+            f.write(file + '\n')
+>>>>>>> path_to_file_list
             
 if __name__ == "__main__":
     path = './'
